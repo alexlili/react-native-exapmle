@@ -70,5 +70,19 @@ react-native-app 栗子
 - cd AwesomeProject 运行 yarn react-native run-ios
 - cd AwesomeProject 运行 yarn start启动metro，然后打开xcode，点击编译按钮
 
+### 本项目iOS版本体验命令同上，可以在特定环境下进行开发，接口环境可以配置，自行根据公司项目更改即可
+- 运行 npm run ios:dev 表示在dev环境下运行APP
+- 运行 npm run ios:qa 表示在qa环境下运行APP
+- 运行 npm run ios:prod 表示在prod环境下运行APP
+#### 脚本里的环境配置其实就是接口环境，iOS打包ipa需要在xcode里面进行打包，无法通过命令打包，这里就不详述了，自行谷歌。
+
+### 本项目Android体验命令如下
+- 运行 npm run android:dev 表示在dev环境下运行APP，将安装到模拟器上运行
+- 运行 npm run android:qa 表示在qa环境下运行APP，将安装到模拟器上运行
+- 运行 npm run android:prod 表示在prod环境下运行APP，将安装到模拟器上运行
+### Android的apk包可以通过命令打包
+- 运行 npm run android:qa:release 表示打包出来的包为qa环境，可以直接在android->output中找到发送给安装到手机里进行测试
+- 运行 npm run android:qa:release 表示打包出来的包为prod环境，可以直接在android->output中找到安装到手机里进行测试
+
 
 
