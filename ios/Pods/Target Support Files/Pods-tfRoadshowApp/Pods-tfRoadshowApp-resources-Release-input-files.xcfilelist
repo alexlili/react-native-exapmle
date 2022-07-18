@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-tfRoadshowApp/Pods-tfRoadshowApp-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle
+${PODS_ROOT}/../../node_modules/react-native-update/ios/pushy_build_time.txt

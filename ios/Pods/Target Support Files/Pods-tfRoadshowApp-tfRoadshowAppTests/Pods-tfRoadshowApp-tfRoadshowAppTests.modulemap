@@ -1,0 +1,6 @@
+module Pods_tfRoadshowApp_tfRoadshowAppTests {
+  umbrella header "Pods-tfRoadshowApp-tfRoadshowAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

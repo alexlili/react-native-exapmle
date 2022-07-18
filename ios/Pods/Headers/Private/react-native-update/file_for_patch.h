@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-update/android/jni/HDiffPatch/file_for_patch.h

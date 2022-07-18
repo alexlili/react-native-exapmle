@@ -1,0 +1,59 @@
+{
+  "name": "react-native-update",
+  "version": "6.2.1",
+  "summary": "react-native hot update",
+  "license": "BSD-3-Clause",
+  "authors": "reactnativecn",
+  "homepage": "https://github.com/reactnativecn/react-native-pushy#readme",
+  "cocoapods_version": ">= 1.6.0",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/reactnativecn/react-native-pushy.git",
+    "tag": "#{s.version}"
+  },
+  "libraries": [
+    "bz2",
+    "z"
+  ],
+  "vendored_libraries": "RCTPushy/libRCTPushy.a",
+  "pod_target_xcconfig": {
+    "USER_HEADER_SEARCH_PATHS": "\"$(SRCROOT)/../node_modules/react-native-update/ios\""
+  },
+  "resources": "ios/pushy_build_time.txt",
+  "script_phases": {
+    "name": "Generate build time",
+    "script": "set -x;date +%s > ${PODS_ROOT}/../../node_modules/react-native-update/ios/pushy_build_time.txt",
+    "execution_position": "before_compile"
+  },
+  "dependencies": {
+    "React": [
+
+    ],
+    "SSZipArchive": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "RCTPushy",
+      "source_files": "ios/RCTPushy/*.{h,m}",
+      "public_header_files": [
+        "ios/RCTPushy/RCTPushy.h"
+      ]
+    },
+    {
+      "name": "HDiffPatch",
+      "source_files": [
+        "ios/RCTPushy/HDiffPatch/**/*.{h,m,c}",
+        "android/jni/hpatch.{h,c}",
+        "android/jni/HDiffPatch/libHDiffPatch/HPatch/*.{h,c}",
+        "android/jni/HDiffPatch/file_for_patch.{h,c}",
+        "android/jni/lzma/C/LzmaDec.{h,c}",
+        "android/jni/lzma/C/Lzma2Dec.{h,c}"
+      ],
+      "private_header_files": "ios/RCTPushy/HDiffPatch/**/*.h"
+    }
+  ]
+}
