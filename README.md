@@ -15,5 +15,60 @@ react-native-app 栗子
 
 ### 环境配置
 #### 按照官方文档先把环境都配置好，xcode、Android studio都安装好，以及一些必要的依赖都安装好。官方文档地址：https://reactnative.cn/
+##### iOS开发配置
+
+- 推荐使用[Homebrew](https://brew.sh/index_zh-cn)进行安装，所以需要先安装homebrew，命令如下：
+
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+
+- 安装Node、Watchman 和 CocoaPods
+
+  ```bash
+  brew install node
+  brew install watchman
+  brew install cocoapods
+  ```
+
+- 安装yarn
+
+  ```bash
+  npm install -g yarn
+  ```
+
+- 安装Xcode
+
+  到App Store中下载Xcode即可，安装完毕后打开，安装相应组件
+
+##### Android开发配置
+
+- 同上安装Homebrew、node、watchman
+
+- 安装JDK（Java Development Kit）
+
+  ```bash
+  brew install adoptopenjdk/openjdk/adoptopenjdk8
+  ```
+
+  安装后使用以下命令来看是否安装成功
+
+  ```bash
+  javac -version
+  ```
+
+- 安装 Android Studio
+
+  点击[Android develop](https://developer.android.google.cn/studio/)进行下载，有VPN的尽量开启VPN。安装界面中选择"Custom"选项，确保选中了以下几项：Android SDK、Android  SDK Platform、Android  Virtual  Device
+
+### iOS-DEMO体验（详情请点击 [RN官网地址](https://reactnative.cn/)）
+
+- 如果曾经安装过react-native-cli，建议uninstall
+- npm install --global expo-cli
+- npx react-native init AwesomeTSProject --template react-native-template-typescript
+- cd AwesomeProject 运行 yarn ios
+- cd AwesomeProject 运行 yarn react-native run-ios
+- cd AwesomeProject 运行 yarn start启动metro，然后打开xcode，点击编译按钮
+
 
 
